@@ -1,12 +1,12 @@
 package learnopengl.chapter1;
 
+import learnopengl.Runner;
 import org.lwjgl.*;
 import org.lwjgl.glfw.*;
 import org.lwjgl.opengl.*;
 import org.lwjgl.system.*;
 
 import java.nio.*;
-import java.util.List;
 
 import static org.lwjgl.glfw.Callbacks.*;
 import static org.lwjgl.glfw.GLFW.*;
@@ -14,7 +14,7 @@ import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryStack.*;
 import static org.lwjgl.system.MemoryUtil.*;
 
-public class HelloWindow {
+public class HelloWindow implements Runner {
 
     // The window handle
     private long window;
@@ -50,6 +50,7 @@ public class HelloWindow {
 
         // Create the window
         window = glfwCreateWindow(300, 300, "Hello World!", NULL, NULL);
+
         if ( window == NULL )
             throw new RuntimeException("Failed to create the GLFW window");
 

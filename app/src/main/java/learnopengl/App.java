@@ -3,15 +3,41 @@
  */
 package learnopengl;
 
+import learnopengl.chapter1.HelloWindow;
+
+import java.util.List;
+import java.util.Objects;
+import java.util.Scanner;
+
 public class App {
 
-    String greeting = "Hello Brotheren";
+    public static String CHAPTER_1 = "chapter1";
 
-    public String getGreeting() {
-        return greeting;
-    }
+    public static List<String> chapters = List.of(
+            CHAPTER_1
+    );
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
+        Runner runner =  null;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your enter a chapter: ");
+        String chapter = "";
+        chapter = scanner.nextLine();
+
+
+        switch (chapter) {
+
+            case "chapter1":
+                runner = new HelloWindow();
+                break;
+            default:
+                String demos = String.join("\n", chapters);
+                System.out.printf("Rerun the program and choose one of the following demos:\n %s%n", demos);
+                break;
+        }
+
+        if(Objects.nonNull(runner))
+            runner.run();
     }
 }

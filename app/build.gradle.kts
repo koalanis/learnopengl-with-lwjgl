@@ -109,9 +109,13 @@ dependencies {
     runtimeOnly("org.lwjgl:lwjgl-zstd::$lwjglNatives")
 }
 
+val run: JavaExec by tasks
+run.standardInput = System.`in`
+
 application {
     // Define the main class for the application.
-    mainClass.set("learnopengl.chapter1.HelloWindow")
+
+    mainClass.set("learnopengl.App")
 }
 
 tasks.test {
