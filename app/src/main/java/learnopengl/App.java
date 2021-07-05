@@ -5,6 +5,8 @@ package learnopengl;
 
 import learnopengl.chapter1.HelloWindow;
 import learnopengl.chapter2.HelloTriangle;
+import learnopengl.chapter3.Shaders;
+import learnopengl.chapter4.Textures;
 
 import java.util.List;
 import java.util.Objects;
@@ -34,6 +36,12 @@ public class App {
                 break;
             case "chapter2":
                 runner = new HelloTriangle();
+                break;
+            case "chapter3":
+                runner = new Shaders();
+                break;
+            case "chapter4":
+                runner = new Textures();
                 break;
             default:
                 String demos = String.join("\n", chapters);

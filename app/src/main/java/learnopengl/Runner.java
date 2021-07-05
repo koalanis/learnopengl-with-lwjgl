@@ -2,6 +2,8 @@ package learnopengl;
 
 public interface Runner {
 
-    void run();
+    default void run() {
+        System.out.println("No implementation yet");
+    }
 
 }
