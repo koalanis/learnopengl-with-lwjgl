@@ -7,6 +7,8 @@ import learnopengl.chapter1.HelloWindow;
 import learnopengl.chapter2.HelloTriangle;
 import learnopengl.chapter3.Shaders;
 import learnopengl.chapter4.Textures;
+import learnopengl.chapter5.Transformations;
+import learnopengl.chapter6.CoordinateSystems;
 
 import java.util.List;
 import java.util.Objects;
@@ -42,6 +44,12 @@ public class App {
                 break;
             case "chapter4":
                 runner = new Textures();
+                break;
+            case "chapter5":
+                runner = new Transformations();
+                break;
+            case "chapter6":
+                runner = new CoordinateSystems();
                 break;
             default:
                 String demos = String.join("\n", chapters);
