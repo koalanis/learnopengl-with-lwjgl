@@ -4,6 +4,7 @@
 package learnopengl;
 
 import learnopengl.chapter1.HelloWindow;
+import learnopengl.chapter2.HelloTriangle;
 
 import java.util.List;
 import java.util.Objects;
@@ -30,6 +31,9 @@ public class App {
 
             case "chapter1":
                 runner = new HelloWindow();
+                break;
+            case "chapter2":
+                runner = new HelloTriangle();
                 break;
             default:
                 String demos = String.join("\n", chapters);
